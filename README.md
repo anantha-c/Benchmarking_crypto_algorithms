@@ -16,7 +16,7 @@ All algorithms are implemented **in software only** (no hardware accelerators), 
 - [Key Results Summary](#key-results-summary)
 - [How to Reproduce](#how-to-reproduce)
 - [Tools & Environment](#tools--environment)
-- [Authors](#authors)
+
 
 ---
 
