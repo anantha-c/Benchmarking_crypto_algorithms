@@ -12,7 +12,6 @@ All algorithms are implemented **in software only** (no hardware accelerators), 
 - [Why This Project?](#why-this-project)
 - [Hardware Platform](#hardware-platform)
 - [Algorithms Evaluated](#algorithms-evaluated)
-- [Repository Structure](#repository-structure)
 - [Methodology](#methodology)
 - [Key Results Summary](#key-results-summary)
 - [How to Reproduce](#how-to-reproduce)
@@ -129,7 +128,6 @@ All experiments share the same conditions to ensure fair comparison:
 - Fixed voltage: **3.3 V**
 - Fixed compiler optimization: **-O2**
 - Same benchmarking harness for all algorithms
-- Each measurement repeated **50–100 iterations** and averaged
 - No hardware cryptographic accelerators used
 
 ---
@@ -179,7 +177,7 @@ All experiments share the same conditions to ensure fair comparison:
 
 ### Prerequisites
 
-- STM32L432KC Nucleo-32 board (or equivalent)
+- STM32L432KC Nucleo-32 board 
 - STM32CubeIDE (v1.x or later)
 - ARM GCC toolchain (bundled with CubeIDE)
 - Python 3.x with `pandas`, `matplotlib` for analysis scripts
@@ -201,19 +199,10 @@ All experiments share the same conditions to ensure fair comparison:
 3. **Flash and run**
    - Connect the STM32L432KC via USB
    - Flash the firmware using STM32CubeIDE or `st-flash`
-   - Open a serial terminal at 115200 baud
-   - Results are printed automatically over UART
+   - Open a serial terminal(Ex: puTTy) at 115200 baud
+   - Results are printed automatically over UART/serial monitor
 
-4. **Analyze results**
-   ```bash
-   cd scripts_/scripts
-   python parse_results.py          # Parse raw UART logs
-   python plot_cycles.py            # Plot execution cycles
-   python plot_throughput.py        # Plot throughput
-   python plot_energy.py            # Plot energy estimates
-   ```
 
----
 
 ## Tools & Environment
 
@@ -225,29 +214,8 @@ All experiments share the same conditions to ensure fair comparison:
 | Python + matplotlib | Result parsing and visualization |
 | UART / Serial Monitor | Capturing benchmark output from the board |
 
----
 
-## Authors
 
-**Anantha SaiCharan** — Department of Computer Science and Engineering, PES University, Bengaluru
-- GitHub: [@anantha-c](https://github.com/anantha-c)
-- Email: anantha.c.charan@gmail.com
 
-**Vadiraja A** — Department of Electronics and Communication Engineering, PES University, Bengaluru
-- Email: vadiraja@pes.edu
 
-**Prasad B. Honavalli** — PES University, Bengaluru
-- Email: prasadhb@pes.edu
 
----
-
-## Related Publication
-
-This repository accompanies the paper:
-
-> *Experimental Performance Benchmarking of Cryptographic Algorithms on STM32 Cortex-M4 Microcontroller for Resource-Constrained IoT Applications*
-> Anantha SaiCharan, Vadiraja A, Prasad B. Honavalli — PES University, 2026
-
----
-
-*If you find this useful, feel free to star the repo or open an issue for questions.*
